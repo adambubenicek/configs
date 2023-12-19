@@ -44,16 +44,21 @@ Go through the GUI installation of [Fedora KDE](https://fedoraproject.org/spins/
     - Privacy & security
         - Disable `Ask to save logins and passwords for websites`
 
-## GPG
+## SSH
 
-1. Plug in Yubikey
-2. `gpg --edit-card`
-3. `fetch`
-4. `quit`
-5. `gpg --edit-key adam@adambubenicek.com`
-6. `trust`
-7. `5` (I trust ultimately)
-8. `quit`
+1. Generate key
+
+```sh
+ssh-keygen -t ed25519-sk
+```
+
+2. Copy it to clipboard
+
+```sh
+wl-copy < ~/.ssh/id_ed25519_sk.pub
+```
+
+3. Paste it to [github.com](https://github.com/settings/keys)
 
 ## Konsole
 

@@ -61,10 +61,4 @@ compinit
 zstyle ':completion:*' menu select
 
 export EDITOR=nvim
-export SSH_AGENT_PID=""
-export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
-export GTK_THEME=Adwaita:dark
-export MOZ_ENABLE_WAYLAND=1
-
-alias ls='ls --color=auto'
 
