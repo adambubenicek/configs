@@ -21,6 +21,10 @@ Go through the GUI installation of [Fedora KDE](https://fedoraproject.org/spins/
 - Touchpad > Enable `Invert scroll direction`
 - Touchpad > Enable `Tap-to-click`
 
+## Configure dock
+
+Enter Edit Mode > More options... > Enable `Auto Hide`
+
 ## Run setup script
 
 ```sh
