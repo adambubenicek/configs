@@ -1,0 +1,70 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+PLUGINS_DIR="$HOME/.local/share/zsh"
+
+if [[ ! -d "$PLUGINS_DIR" ]]; then
+  mkdir -p "$PLUGINS_DIR"
+fi
+
+if [[ ! -d "$PLUGINS_DIR/powerlevel10k" ]]; then
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$PLUGINS_DIR/powerlevel10k"
+fi
+
+source "$PLUGINS_DIR/powerlevel10k/powerlevel10k.zsh-theme"
+source ~/.p10k.zsh
+
+if [[ ! -d "$PLUGINS_DIR/zsh-autosuggestions" ]]; then
+  git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions "$PLUGINS_DIR/zsh-autosuggestions"
+fi
+
+source "$PLUGINS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+export ASDF_DATA_DIR="$PLUGINS_DIR/asdf"
+if [[ ! -d "$PLUGINS_DIR/asdf" ]]; then
+  git clone --depth=1 https://github.com/asdf-vm/asdf.git "$PLUGINS_DIR/asdf"
+
+  source "$PLUGINS_DIR/asdf/asdf.sh"
+
+  asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+else
+  source "$PLUGINS_DIR/asdf/asdf.sh"
+fi
+
+function osc7-pwd() {
+    emulate -L zsh
+    setopt extendedglob
+    local LC_ALL=C
+    printf '\e]7;file://%s%s\e\' $HOST ${PWD//(#m)([^@-Za-z&-;_~])/%${(l:2::0:)$(([##16]#MATCH))}}
+}
+
+function chpwd-osc7-pwd() {
+    (( ZSH_SUBSHELL )) || osc7-pwd
+}
+add-zsh-hook -Uz chpwd chpwd-osc7-pwd
+
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt autocd
+bindkey -v
+zstyle :compinstall filename "$HOME/.zshrc"
+setopt HIST_IGNORE_SPACE
+
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select
+
+export EDITOR=nvim
+export SSH_AGENT_PID=""
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
+export GTK_THEME=Adwaita:dark
+export MOZ_ENABLE_WAYLAND=1
+
+alias ls='ls --color=auto'
+
