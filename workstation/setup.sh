@@ -27,9 +27,6 @@ flatpak install flathub --noninteractive \
 	com.valvesoftware.Steam \
 	org.kde.haruna
 
-# Set look and feel
-lookandfeeltool --apply org.kde.breezedark.desktop
-
 # Symlink files
 ln -sf "$(pwd)/zsh/zshrc" "$HOME/.zshrc"
 ln -sf "$(pwd)/zsh/p10k.zsh" "$HOME/.p10k.zsh"
