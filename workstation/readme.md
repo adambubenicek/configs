@@ -63,11 +63,3 @@ wl-copy < ~/.ssh/id_ed25519_sk.pub
 ```
 
 3. Paste it to [github.com](https://github.com/settings/keys)
-
-## Konsole
-
-- Settings > Disable `Show Menubar`
-- Settings > Toolbars Shown > Disable `Main Toolbar`
-- Settings > Toolbars Shown > Disable `Session Toolbar`
-- Settings > Configure Keyboard Shortcuts > Next Tab > Set to `Ctrl+Tab`
-- Settings > Configure Keyboard Shortcuts > Previous Tab > Set to `Ctrl+Shift+Tab`
