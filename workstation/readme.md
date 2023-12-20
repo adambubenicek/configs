@@ -17,6 +17,7 @@ archinstall
 
 ```sh
 sudo pacman -S --needed \
+  man-db \
   firefox \
   foot \
   neovim \
@@ -24,6 +25,7 @@ sudo pacman -S --needed \
   git \
   haruna \
   openssh \
+  nebula \
   keepassxc \
   syncthing
 ```
@@ -75,3 +77,12 @@ Pair with fellow devices at the [web GUI](http://localhost:8384)
         - Set default search engine to `Kagi`
     - Privacy & security
         - Disable `Ask to save logins and passwords for websites`
+
+## Configure KeepassXC
+
+- View
+  - Theme
+    - Enable `Classic (Platform-native)`
+- Settings
+  - SSH Agent
+    - Enable `SSH Agent Integration`
