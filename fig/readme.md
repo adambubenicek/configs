@@ -24,6 +24,15 @@ While in console, enable `root` login by removing it from `/etc/cockpit/disallow
 systemctl restart cockpit
 ```
 
+Download authorized keys
+
+```
+mkdir ~/.ssh
+chmod 700 ~/.ssh
+curl https://github.com/adambubenicek.keys > ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+```
+
 ## Install packages
 
 ```
