@@ -42,6 +42,8 @@ Enter Edit Mode > More options... > Enable `Auto Hide`
 - Install [Bitwarden](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/)
     - Pin to toolbar
 - Install [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
+- Install [Firefox Color](https://addons.mozilla.org/en-GB/firefox/addon/firefox-color/)
+    - Install [Catppuccin](https://color.firefox.com/?theme=XQAAAAJHBAAAAAAAAABBqYhm849SCicxcUcPX38oKRicm6da8pFtMcajvXaAE3RJ0F_F447xQs-L1kFlGgDKq4IIvWciiy4upusW7OvXIRinrLrwLvjXB37kvhN5ElayHo02fx3o8RrDShIhRpNiQMOdww5V2sCMLAfehhp8u7kT4nh31-_5sD_P8FhlfX9Sdj_brd9hzw5NA_jx4peTGmoiUcikCHxa8Sm8bylvXElo3HHzylyv8f7R7gwkSEe8Mkq_ERB00vhRYSdLVEI7OR2j9y8UtYJhXmmHxXtQ2a2q0wDt9h-Dv7L5NTOL6rXow07mQCwsiafOlEKwLdkeAd2DoxJ1_Pu_amXOiUhOKrOw2DBrS-cIjSXWu9in58J8EBSEno0b4K2apcsY4mww6HdBAXjQjS7PBl1Eoli3qcNvy3o0v-yq9guO7ozjOWAFY-rVMCACPIWLr-pEBHErXolnftBIiOuC_k1brGAscZ579rDSHW_Bf9KewXOw3subWzfX0sPqI5eJLXKKLKfJEuPnm7z6IlEkCi__KG8k0-VIsE0lvbgk_dPXNsl8__ihao0)
 - Remove Pocket from toolbar
 - Remove Firefox account from toolbar
 - Remove Firefox view from toolbar
