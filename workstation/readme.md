@@ -21,6 +21,12 @@ Go through the GUI installation of [Fedora KDE](https://fedoraproject.org/spins/
 - Touchpad > Enable `Invert scroll direction`
 - Touchpad > Enable `Tap-to-click`
 
+## Configure appearance
+- Global Theme > Enable `Breeze Dark`
+    - `Appearance settings` and `Desktop and window layout` should be enabled
+- Download and unzip [Cattpuccin colors](https://github.com/catppuccin/kde/releases/latest/download/Mocha-color-schemes.tar.gz)
+- Import with `Install from File...` and `Apply`
+
 ## Configure dock
 
 Enter Edit Mode > More options... > Enable `Auto Hide`
