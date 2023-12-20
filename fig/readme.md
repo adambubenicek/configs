@@ -30,14 +30,6 @@ systemctl restart cockpit
 sudo dnf install nebula
 ```
 
-## Configure SSH
-
-From a workstation:
-
-```
-ssh-copy-id root@{Fig's IP address}
-```
-
 ## Configure Nebula
 
 `/etc/nebula/config.yml`
