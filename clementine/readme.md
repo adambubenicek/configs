@@ -1,6 +1,6 @@
 # Clementine
 
-Create a VPS at `Hetzner.com` from `Fedora 39`.
+Create a VPS with a public IP address.
 
 ```sh
 dnf install nebula
