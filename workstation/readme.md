@@ -1,43 +1,63 @@
 # Pear
 
+Boot [Arch Linux](https://archlinux.org/download/) ISO
+
 ## Install
 
-Go through the GUI installation of [Fedora KDE](https://fedoraproject.org/spins/kde/download).
-
-- Create a sude user `adam`
-- Enable full disk encryption
-- Set hostname to `pear`
-- Set a timezone
-
-## Configure displays and monitors
-
-- Display Configuration > Set scale to `100%`
-- Night Color > Set to `Sunset and sunrise at current location`
-
-## Configure input devices 
-
-- Keyboard > Advanced > Caps Lock behavior > Enable `Swap Esc and Caps Lock`
-- Mouse > Enable `Invert scroll direction`
-- Touchpad > Enable `Invert scroll direction`
-- Touchpad > Enable `Tap-to-click`
-
-## Configure appearance
-- Global Theme > Enable `Breeze Dark`
-    - `Appearance settings` and `Desktop and window layout` should be enabled
-- Download and unzip [Cattpuccin colors](https://github.com/catppuccin/kde/releases/latest/download/Mocha-color-schemes.tar.gz)
-- Import with `Install from File...` and `Apply`
-
-## Configure dock
-
-Enter Edit Mode > More options... > Enable `Auto Hide`
-
-## Run setup script
-
 ```sh
-./setup.sh
+archinstall
+
+# Hostname: Pear
+# Profile: Desktop/KDE
+# Audio: Pipewire
+# Network configuration: NetworkManager
 ```
 
-## Firefox
+## Install packages
+
+```sh
+sudo pacman -S --needed \
+  firefox \
+  foot \
+  neovim \
+  lazygit \
+  git \
+  haruna \
+  openssh \
+  keepassxc \
+  syncthing
+```
+
+## Configure Syncthing
+
+```sh
+sudo systemctl enable --now syncthing@$USER
+```
+
+Pair with fellow devices at the [web GUI](http://localhost:8384)
+
+## Configure KDE
+- Appearance
+  - Enable `Breeze Dark`
+  - Colors
+    - Download [Cattpuccin colors](https://github.com/catppuccin/kde/releases/latest/download/Mocha-color-schemes.tar.gz)
+    - `Import from file...` and `Apply`
+- Input Devices
+  - Keyboard
+    - Advanced
+      - Enable `Swap Esc and Caps Lock`
+  - Mouse
+    - Enable `Invert scroll direction`
+  - Touchpad
+    - Enable `Invert scroll direction`
+    - Enable `Tap-toclick`
+- Display & Monitor
+  - Display Configuration
+    - Ensure scale and refresh rate are correct
+  - Night Color
+    - Set to `Sunset and sunrise at current location`
+
+## Configure Firefox
 
 - Install [Bitwarden](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/)
     - Pin to toolbar
@@ -55,19 +75,3 @@ Enter Edit Mode > More options... > Enable `Auto Hide`
         - Set default search engine to `Kagi`
     - Privacy & security
         - Disable `Ask to save logins and passwords for websites`
-
-## SSH
-
-1. Generate key
-
-```sh
-ssh-keygen -t ed25519-sk
-```
-
-2. Copy it to clipboard
-
-```sh
-wl-copy < ~/.ssh/id_ed25519_sk.pub
-```
-
-3. Paste it to [github.com](https://github.com/settings/keys)
