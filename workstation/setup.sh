@@ -6,6 +6,9 @@ set -e
 # https://tailscale.com/download/linux/fedora
 sudo dnf config-manager --add-repo https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 
+# Remove default firefox
+sudo dnf remove -y firefox
+
 # Install packages
 sudo dnf install -y \
 	git \
