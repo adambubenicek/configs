@@ -30,6 +30,12 @@ sudo pacman -S --needed \
   syncthing
 ```
 
+## Configure SSH
+
+```
+systemctl enable --user --now ssh-agent
+```
+
 ## Configure Syncthing
 
 ```sh
