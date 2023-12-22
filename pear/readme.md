@@ -19,7 +19,7 @@ archinstall
 sudo pacman -S --needed \
   man-db \
   firefox \
-  foot \
+  alacritty \
   neovim \
   lazygit \
   git \
@@ -111,6 +111,6 @@ mkdir -p ~/.config/{git,tmux,foot,environment.d}
 ln -sf $PWD/git/config ~/.config/git/config
 ln -sf $PWD/zsh/zshrc ~/.zshrc
 ln -sf $PWD/zsh/p10k.zsh ~/.p10k.zsh
-ln -sf $PWD/foot/foot.ini ~/.config/foot/foot.ini
+ln -sf $PWD/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -sf $PWD/tmux/tmux.conf ~/.config/tmux/tmux.conf
 ```
