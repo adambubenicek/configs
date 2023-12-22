@@ -25,12 +25,12 @@ sudo pacman -S --needed \
   git \
   haruna \
   openssh \
-  nebula \
   keepassxc \
   syncthing \
   zsh \
   tmux \
   wl-clipboard
+  tailscale
 ```
 
 ## Configure SSH
@@ -39,44 +39,11 @@ sudo pacman -S --needed \
 systemctl enable --user --now ssh-agent
 ```
 
-## Configure Nebula
-
-`/etc/nebula/config.yml`
+## Configure Tailscale
 
 ```
-pki:
-  ca: /etc/nebula/ca.crt
-  cert: /etc/nebula/pear.crt
-  key: /etc/nebula/pear.key
-
-static_host_map:
-  "10.0.0.1": ["{Clementine's public IP address}:4242"]
-
-lighthouse:
-  hosts:
-    - "10.0.0.1"
-
-punchy:
-  punch: true
-
-listen:
-  host: 0.0.0.0
-  port: 4242
-
-firewall:
-  outbound:
-    - port: any
-      proto: any
-      host: any
-
-  inbound:
-    - port: any
-      proto: any
-      host: any
-```
-
-```
-sudo systemctl enable --now nebula
+sudo systemctl enable --now tailscaled
+sudo tailscale up
 ```
 
 ## Configure Syncthing
