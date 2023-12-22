@@ -29,7 +29,8 @@ sudo pacman -S --needed \
   syncthing \
   zsh \
   tmux \
-  wl-clipboard
+  wl-clipboard \
+  gwenview \
   tailscale
 ```
 
