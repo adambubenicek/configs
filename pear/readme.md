@@ -113,4 +113,6 @@ ln -sf $PWD/zsh/zshrc ~/.zshrc
 ln -sf $PWD/zsh/p10k.zsh ~/.p10k.zsh
 ln -sf $PWD/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -sf $PWD/tmux/tmux.conf ~/.config/tmux/tmux.conf
+ln -sf $PWD/nvim/init.lua ~/.config/nvim/init.lua
+ln -sf $PWD/environment/custom.conf ~/.config/environment.d/custom.conf
 ```
