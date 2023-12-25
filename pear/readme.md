@@ -55,6 +55,17 @@ sudo systemctl enable --now syncthing@$USER
 
 Pair with fellow devices at the [web GUI](http://localhost:8384)
 
+## Configure GPG
+
+Plug-in Yubikey first
+
+```
+gpg --edit-card
+# fetch
+
+systemctl enable --user --now gpg-agent.socket
+```
+
 ## Configure KDE
 - Appearance
   - Enable `Breeze Dark`
@@ -115,4 +126,5 @@ ln -sf $PWD/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -sf $PWD/tmux/tmux.conf ~/.config/tmux/tmux.conf
 ln -sf $PWD/nvim/init.lua ~/.config/nvim/init.lua
 ln -sf $PWD/environment/custom.conf ~/.config/environment.d/custom.conf
+ln -sf $PWD/gpg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 ```
